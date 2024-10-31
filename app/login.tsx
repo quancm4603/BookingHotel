@@ -22,7 +22,7 @@ export default function LoginScreen() {
       await signInWithEmailAndPassword(auth, email, password);
       //   console.log("Đăng nhập thành công!");
       // Điều hướng đến màn hình chính hoặc xử lý tiếp sau khi đăng nhập thành công
-      router.replace({ pathname: "/" });
+      router.replace({ pathname: "/", params: {} });
     } catch (error) {
       //   console.error("Đăng nhập thất bại", error);
     } finally {
@@ -62,6 +62,14 @@ export default function LoginScreen() {
         autoCapitalize="none"
       />
       <Button title="Đăng nhập" onPress={handleLogin} />
+      <Button
+        title="Đăng ký"
+        onPress={() => {
+          router.replace({ pathname: "/register", params: {} });
+        }}
+        // sizr nhỏ hơn 
+        color="#841584"
+      />
     </View>
   );
 }

@@ -46,7 +46,7 @@ export default function RegisterScreen() {
 
       Alert.alert("Thông báo", "Đăng ký thành công! Bạn có thể đăng nhập ngay.");
       console.log("Đăng ký thành công!");
-      router.replace({ pathname: "/login" });
+      router.replace({ pathname: "/", params: {} });
     } catch (error) {
       console.error("Đăng ký thất bại", error);
       Alert.alert("Thông báo", "Đăng ký thất bại. Vui lòng thử lại.");
